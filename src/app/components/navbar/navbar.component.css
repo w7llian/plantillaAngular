@@ -1,0 +1,24 @@
+.navbar {
+    background-color: brown;
+}
+
+.nav-link {
+    
+}
+
+a {
+    color:white
+}
+.dropdown-menu {
+    background-color: brown;
+}
+
+.span-title {
+    color: rgb(243, 227, 10);
+}
+
+img {
+    border-radius: 50%;
+    width: 100px;
+    height: 45px;
+}

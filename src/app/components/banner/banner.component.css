@@ -1,0 +1,12 @@
+.container {
+    margin-top: 71px;
+}
+
+.ped-act {
+    background-color: white;
+    margin-top: 4px;
+}
+
+.ped-act strong {
+    color: brown;
+}
