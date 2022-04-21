@@ -5,6 +5,7 @@ import { LandingComponent } from './landing/landing.component';
 import { CatalogoComponent } from './catalogo/catalogo.component';
 import { BannerComponent } from './banner/banner.component';
 import { ProductosComponent } from './productos/productos.component';
+import { SwiperModule } from "swiper/angular";
 
 
 
@@ -21,7 +22,8 @@ import { ProductosComponent } from './productos/productos.component';
     LandingComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SwiperModule
   ]
 })
 export class ComponentsModule { }

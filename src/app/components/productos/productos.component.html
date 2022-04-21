@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row">
+    <div class="row mt-2 mb-2">
         <div class="col-2">
             <h3>Productos</h3>
         </div>
@@ -9,68 +9,147 @@
     </div>
 
     <div class="row">
-        <div class="col-sm-3">
-            <div class="card bg-success mb-3">
-                <img class="card-img-top" src="assets/medicamento.jpg" alt="">
-                <div class="card-body bg-primary">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">gergerger</p>
-                    <p class="card-text"><small class="text-muted">gergre</small></p>
-                </div>
-                
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="card">
-                <img class="card-img-top" src="assets/medicamento.jpg" alt="">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">gergerger</p>
-                    <p class="card-text"><small class="text-muted">gergre</small></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="card">
-                <img class="card-img-top" src="assets/medicamento.jpg" alt="">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">gergerger</p>
-                    <p class="card-text"><small class="text-muted">gergre</small></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="card">
-                <img class="card-img-top" src="assets/medicamento.jpg" alt="">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">gergerger</p>
-                    <p class="card-text"><small class="text-muted">gergre</small></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="card">
-                <img class="card-img-top" src="assets/medicamento.jpg" alt="">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">gergerger</p>
-                    <p class="card-text"><small class="text-muted">gergre</small></p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-3">
-            <div class="card">
-                <img class="card-img-top" src="assets/medicamento.jpg" alt="">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">gergerger</p>
-                    <p class="card-text"><small class="text-muted">gergre</small></p>
-                </div>
-            </div>
-        </div>
 
+        <swiper
+            [slidesPerView]="5"
+            [spaceBetween]="30"
+            [slidesPerGroup]="3"
+            [loop]="true"
+            [loopFillGroupWithBlank]="true"
+            [pagination]="{
+            clickable: true
+            }"
+            [navigation]="true"
+            class="mySwiper"
+        >
+            <ng-template swiperSlide>
+
+                <div class="card mb-1 mb-5" data-bs-toggle="modal" data-bs-target="#modalProducto">
+                    <img class="card-img-top mx-auto" src="assets/medicamento.jpg" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Diclofenaco</h5>
+                        <p class="card-text">gergerger</p>
+                        <p class="card-text"><small class="text-muted">$120</small></p>
+                    </div>
+                    <button class="btn btn-danger text-white" id="addCart" type="submit"><i class="fa-solid fa-cart-shopping mr-10"></i>Agregar al carrito</button>
+                </div>
+
+            </ng-template>
+
+            <ng-template swiperSlide>
+
+                <div class="card mb-1 mb-5">
+                    <img class="card-img-top mx-auto" src="assets/medicamento.jpg" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Diclofenaco</h5>
+                        <p class="card-text">gergerger</p>
+                        <p class="card-text"><small class="text-muted">$120</small></p>
+                    </div>
+                    <button class="btn btn-danger text-white" id="addCart" type="submit"><i class="fa-solid fa-cart-shopping"></i>Agregar al carrito</button>
+                </div>
+
+            </ng-template>
+
+            <ng-template swiperSlide>
+
+                <div class="card mb-1 mb-5">
+                    <img class="card-img-top mx-auto" src="assets/medicamento.jpg" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Diclofenaco</h5>
+                        <p class="card-text">gergerger</p>
+                        <p class="card-text"><small class="text-muted">$120</small></p>
+                    </div>
+                    <button class="btn btn-danger text-white" id="addCart" type="submit"><i class="fa-solid fa-cart-shopping"></i>Agregar al carrito</button>
+                </div>
+
+            </ng-template>
+
+            <ng-template swiperSlide>
+
+                <div class="card mb-1 mb-5">
+                    <img class="card-img-top mx-auto" src="assets/medicamento.jpg" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Diclofenaco</h5>
+                        <p class="card-text">gergerger</p>
+                        <p class="card-text"><small class="text-muted">$120</small></p>
+                    </div>
+                    <button class="btn btn-danger text-white" id="addCart" type="submit"><i class="fa-solid fa-cart-shopping"></i>Agregar al carrito</button>
+                </div>
+
+            </ng-template>
+
+            <ng-template swiperSlide>
+
+                <div class="card mb-1 mb-5">
+                    <img class="card-img-top mx-auto" src="assets/medicamento.jpg" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Diclofenaco</h5>
+                        <p class="card-text">gergerger</p>
+                        <p class="card-text"><small class="text-muted">$120</small></p>
+                    </div>
+                    <button class="btn btn-danger text-white" id="addCart" type="submit"><i class="fa-solid fa-cart-shopping"></i>Agregar al carrito</button>
+                </div>
+
+            </ng-template>
+
+            <ng-template swiperSlide>
+
+                <div class="card mb-1 mb-5">
+                    <img class="card-img-top mx-auto" src="assets/medicamento.jpg" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Diclofenaco</h5>
+                        <p class="card-text">gergerger</p>
+                        <p class="card-text"><small class="text-muted">$120</small></p>
+                    </div>
+                    <button class="btn btn-danger text-white" id="addCart" type="submit"><i class="fa-solid fa-cart-shopping"></i>Agregar al carrito</button>
+                </div>
+
+            </ng-template>
+
+            <ng-template swiperSlide>
+
+                <div class="card mb-1 mb-5">
+                    <img class="card-img-top mx-auto" src="assets/medicamento.jpg" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Diclofenaco</h5>
+                        <p class="card-text">gergerger</p>
+                        <p class="card-text"><small class="text-muted">$120</small></p>
+                    </div>
+                    <button class="btn btn-danger text-white" id="addCart" type="submit"><i class="fa-solid fa-cart-shopping"></i>Agregar al carrito</button>
+                </div>
+
+            </ng-template>
+        </swiper>
 
     </div>
+
+    <button type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus
+sagittis lacus vel augue laoreet rutrum faucibus.">
+  Popover on bottom
+</button>
+
+</div>
+
+
+<div class="modal fade" id="modalProducto" tabindex="-1"  aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="assets/951319971549261.jpg"alt="">
+            <img src="assets/951319971549261.jpg"alt="">
+            <img src="assets/951319971549261.jpg"alt="">
+            <img src="assets/951319971549261.jpg"alt="">
+            <img src="assets/951319971549261.jpg"alt="">
+            <img src="assets/951319971549261.jpg"alt="">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
 </div>

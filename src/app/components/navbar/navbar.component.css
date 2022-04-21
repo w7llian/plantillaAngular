@@ -1,24 +1,31 @@
 .navbar {
-    background-color: brown;
+    background-color: white;
+}
+
+.navbar strong {
+    color: brown;
 }
 
 .nav-link {
-    
+    color: brown;
 }
 
 a {
     color:white
 }
 .dropdown-menu {
-    background-color: brown;
 }
 
-.span-title {
+/* .span-title {
     color: rgb(243, 227, 10);
-}
+} */
 
 img {
     border-radius: 50%;
     width: 100px;
     height: 45px;
+}
+
+#icon-cart {
+    color: white;
 }
