@@ -6,6 +6,7 @@ import { CatalogoComponent } from './catalogo/catalogo.component';
 import { BannerComponent } from './banner/banner.component';
 import { ProductosComponent } from './productos/productos.component';
 import { SwiperModule } from "swiper/angular";
+import { OfertasComponent } from './ofertas/ofertas.component';
 
 
 
@@ -15,7 +16,8 @@ import { SwiperModule } from "swiper/angular";
     LandingComponent,
     CatalogoComponent,
     BannerComponent,
-    ProductosComponent
+    ProductosComponent,
+    OfertasComponent
   ],
   exports: [
     NavbarComponent,

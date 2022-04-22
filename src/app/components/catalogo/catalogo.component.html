@@ -1,8 +1,63 @@
 
+<div class="container">
 
+    <div class="row">
+
+        <strong><h1 class="text-center">Las mejores ofertas</h1></strong>
+
+    </div>
+
+    <div class="row">
+        <nav aria-label="...">
+            <ul class="pagination justify-content-end">
+              <li class="page-item" *ngIf="indexPag!==1">
+                <span class="page-link" (click)="paginacion(1,-(indexPag-1))">Primero</span>
+              </li>
+              <li class="page-item" *ngIf="indexPag!==1">
+                <span class="page-link" (click)="paginacion(indexPag-1,-1)">Anterior</span>
+              </li>
+              <li class="page-item" aria-current="page" *ngIf="indexPag!==1">
+                <span class="page-link" (click)="paginacion(indexPag-1,-1)">{{ indexPag-1 }}</span>
+              </li>
+              <li class="page-item active"><a class="page-link">{{ indexPag }}</a></li>
+              <li class="page-item" aria-current="page" *ngIf="indexPag!==ultimaPag">
+                <span class="page-link" (click)="paginacion(indexPag+1,1)">{{ indexPag+1 }}</span>
+              </li>
+              <li class="page-item" *ngIf="indexPag!==ultimaPag">
+                <span class="page-link" (click)="paginacion(indexPag+1,1)">Siguiente</span>
+              </li>
+              <li class="page-item" *ngIf="indexPag!==ultimaPag">
+                <span class="page-link" (click)="paginacion(ultimaPag,ultimaPag-indexPag)">Ultimo</span>
+              </li>
+            </ul>
+          </nav>
+    </div>
+
+    <div class="row">
+
+        <div class="card col-3 mx-0.9 mb-2" *ngFor="let p of productos">
+            <img class="card-img-top" src="{{p.img}}" alt="Card image cap">            
+            <div class="card-body">
+                <div class="card-title">
+                    <p class="card-text text-uppercase text-center">{{ p.nombre }}</p>
+                </div>
+                <small class="card-subtitle text-muted ">{{ p.descripcion }}</small>
+                <p class="card-text text-muted text-end">S/. {{ p.precio }}</p>
+                
+            </div>
+            <div class="div-button text-end ">
+                <button type="button" class="btn btn-outline-danger rounded-pill mb-2" (click)="addCart(p)"><i class="fa-solid fa-cart-shopping mr-10"></i>   Agregar</button>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- <img src="assets/951319971549261.jpg"alt="">
 <img src="assets/951319971549261.jpg"alt="">
 <img src="assets/951319971549261.jpg"alt="">
 <img src="assets/951319971549261.jpg"alt="">
 <img src="assets/951319971549261.jpg"alt="">
-<img src="assets/951319971549261.jpg"alt="">
-<img src="assets/951319971549261.jpg"alt="">
+<img src="assets/951319971549261.jpg"alt=""> -->

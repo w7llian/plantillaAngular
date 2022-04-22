@@ -3,7 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  apiNode: "http://app.castillo.pe:8080/backWeb/api/exec_procedure"
 };
 
 /*

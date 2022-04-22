@@ -1,3 +1,7 @@
+.cabecera {
+    background-color: brown;
+}
+
 .navbar {
     background-color: white;
 }
@@ -8,10 +12,6 @@
 
 .nav-link {
     color: brown;
-}
-
-a {
-    color:white
 }
 .dropdown-menu {
 }
@@ -28,4 +28,8 @@ img {
 
 #icon-cart {
     color: white;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
 }
