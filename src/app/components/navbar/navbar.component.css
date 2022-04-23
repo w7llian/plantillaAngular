@@ -20,11 +20,12 @@
     color: rgb(243, 227, 10);
 } */
 
-img {
+#imgIcono {
     border-radius: 50%;
     width: 100px;
     height: 45px;
 }
+
 
 #icon-cart {
     color: white;
@@ -32,4 +33,11 @@ img {
 
 .dropdown:hover .dropdown-menu {
     display: block;
+}
+
+.dropleft {
+    right: 100%;
+    top: 0%;
+    margin-top: 0.125rem;
+    width: 400px;
 }

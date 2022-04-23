@@ -5,7 +5,7 @@
   <div class="container-fluid">
 
     <div class="navbar-nav">
-      <a class="navbar-brand text-white" href="#"><img src="assets/951319971549261.jpg" alt=""></a>
+      <a class="navbar-brand text-white" href="#"><img src="assets/951319971549261.jpg" alt="" id="imgIcono"></a>
       <a class="navbar-brand" href="#"><strong class="text-uppercase animate__animated animate__zoomInRight"><span class="span-title">Representaciones </span>Castillo</strong></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -56,36 +56,49 @@
 
     <div class="navbar-nav">
 
-      <div class="btn-group dropleft">
-        <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropleft
-        </button>
-        <div class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Action</a></li>
-          <li><a class="dropdown-item" href="#">Action</a></li>
-        </div>
-      </div>
-
       <div class="dropdown">
         <button type="button" class="btn btn-secondary rounded-circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fa-solid fa-cart-shopping mr-10" id="icon-cart"></i>
+          <i class="fa-solid fa-cart-shopping" id="icon-cart"></i>
         </button>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#">
+        <div class="dropdown-menu dropleft" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#" *ngFor="let p of carrito">
             <div class="media">
-              <img class="align-self-center mr-3" src="assets/medicamento.jpg" alt="Generic placeholder image">
-              <div class="media-body">
-                <h5 class="mt-0">Center-aligned media</h5>
-                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-                <p class="mb-0">Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+              <div class="card">
+                <div class="row card-body">
+                  <div class="col-3 imgCarrito">
+                    <img class="align-self-center mr-3 w-100 p-2" src="assets/medicamento.jpg" alt="Generic placeholder image">
+                  </div>
+                  <div class="col-9">
+                    <p class="card-text mt-0">{{ p.nombre }}</p>
+                    <p class="card-text mb-0 text-muted text-end">{{ p.precio }}</p>
+                  </div>
+                </div>
               </div>
+
             </div>
           </a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <!-- <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">Something else here</a> -->
         </div>
       </div>
     </div>
+
+    <!-- <div class="navbar-nav">
+
+      <button type="button" class="btn btn-secondary rounded-circle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+        <i class="fa-solid fa-cart-shopping mr-10" id="icon-cart"></i>
+      </button>
+
+      <div class="offcanvas offcanvas-end bg-primary" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h5 id="offcanvasRightLabel">Offcanvas right</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+        </div>
+      </div>
+
+    </div> -->
+    
   </div>
 </nav>

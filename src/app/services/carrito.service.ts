@@ -34,8 +34,8 @@ export class CarritoService {
   }
 
   getCarrito(): Array<Producto>{
+    console.log(JSON.parse(localStorage.getItem('carrito')!));
     return <Array<Producto>>JSON.parse(localStorage.getItem('carrito')!);
-
   }
 
   actualizarCarrito(lista: Array<Producto>){
