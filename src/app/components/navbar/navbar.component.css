@@ -41,3 +41,7 @@
     margin-top: 0.125rem;
     width: 400px;
 }
+
+.mytext {
+    word-break: break-all;
+}

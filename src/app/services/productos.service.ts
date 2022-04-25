@@ -51,13 +51,16 @@ export class ProductosService {
     await this.http.post(`${environment.apiNode}`, form).toPromise().then( (resp) => {
         let res = Object.values(resp!);
         console.log('PROMESA',res[0]);
-        res[0].forEach((element: {ItemName: any, LastPurPrc: any}) => {
+        res[0].forEach((element: {ItemCode: any, ItemName: any, LastPurPrc: any}) => {
                     
           this.productos.push({
+            codProducto: element.ItemCode,
             nombre: element.ItemName,
             precio: element.LastPurPrc,
             descripcion: element.ItemName,
-            img: "assets/medicamento.jpg"
+            img: "assets/medicamento.jpg",
+            cantidad:1,
+            montoTotal: element.LastPurPrc
           });
 
         });

@@ -8,6 +8,7 @@ import { ProductosComponent } from './productos/productos.component';
 import { SwiperModule } from "swiper/angular";
 import { OfertasComponent } from './ofertas/ofertas.component';
 import { FooterComponent } from './footer/footer.component';
+import { CarritoComponent } from './carrito/carrito.component';
 
 
 
@@ -19,7 +20,8 @@ import { FooterComponent } from './footer/footer.component';
     BannerComponent,
     ProductosComponent,
     OfertasComponent,
-    FooterComponent
+    FooterComponent,
+    CarritoComponent
   ],
   exports: [
     NavbarComponent,

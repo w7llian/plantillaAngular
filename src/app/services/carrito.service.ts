@@ -14,12 +14,21 @@ export class CarritoService {
 
   agregarCarrito(item : Producto){
 
-    if(localStorage.getItem('carrito')!==null)
+    if(localStorage.getItem('carrito')!==null){
       this.carrito = JSON.parse(localStorage.getItem('carrito')!);
-    else
+      let temp = this.carrito.filter(unit => unit.codProducto === item.codProducto)[0];
+      if(temp){
+        temp.cantidad+=1;
+        temp.montoTotal = temp.precio*temp.cantidad;
+      }else {
+        this.carrito.push(item);
+      }
+    }else{
       this.carrito = [];
+      this.carrito.push(item);
+    }
     
-    this.carrito.push(item);
+    
 
     localStorage.setItem('carrito', JSON.stringify(this.carrito));
 

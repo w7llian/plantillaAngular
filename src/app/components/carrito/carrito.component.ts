@@ -3,14 +3,13 @@ import { Producto } from 'src/app/interfaces/producto';
 import { CarritoService } from 'src/app/services/carrito.service';
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  selector: 'app-carrito',
+  templateUrl: './carrito.component.html',
+  styleUrls: ['./carrito.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class CarritoComponent implements OnInit {
 
   carrito: Array<Producto> = [];
-  cont_carrito: number = 0;
 
   constructor(
     private _carritoService: CarritoService
@@ -18,17 +17,22 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.getCarrito();
-    if(this.carrito !== null)
-			this.cont_carrito = this.carrito.length;
-		
-		this._carritoService.dispachProductos.subscribe(() => {
-			this.getCarrito();
-			this.cont_carrito = this.carrito.length;
-		});
   }
 
   getCarrito() {
     this.carrito = this._carritoService.getCarrito();
+  }
+
+  sumar(item: Producto){
+    item.cantidad += 1;
+    item.montoTotal = item.precio*item.cantidad;
+  }
+
+  restar(item: Producto){
+    if(item.cantidad !== 0){
+      item.cantidad -= 1;
+      item.montoTotal = item.precio*item.cantidad;
+    }
   }
 
 }

@@ -59,12 +59,22 @@
       <div class="dropdown">
         <button type="button" class="btn btn-secondary rounded-circle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <i class="fa-solid fa-cart-shopping" id="icon-cart"></i>
+          <span id="checkout_items" class="rounded-circle checkout_items bg-danger">{{ cont_carrito }}</span>
         </button>
         <div class="dropdown-menu dropleft" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="#" *ngFor="let p of carrito">
-            <div class="media">
-              <div class="card">
-                <div class="row card-body">
+          <a class="dropdown-item" href="/carrito" *ngFor="let p of carrito">
+
+            <div class="row">
+              <div class="col-3 imgCarrito">
+                <img class="align-self-center mr-3 w-100 p-2" src="assets/medicamento.jpg" alt="Generic placeholder image">
+              </div>
+              <div class="mytext col-9 bg-success">
+                <p class="card-text mt-0">{{ p.nombre }}</p>
+                <p class="mb-0 text-muted text-end">{{ p.precio }}</p>
+              </div>
+            </div>
+              <!-- <div class="card">
+                <div class="card-body">
                   <div class="col-3 imgCarrito">
                     <img class="align-self-center mr-3 w-100 p-2" src="assets/medicamento.jpg" alt="Generic placeholder image">
                   </div>
@@ -73,12 +83,8 @@
                     <p class="card-text mb-0 text-muted text-end">{{ p.precio }}</p>
                   </div>
                 </div>
-              </div>
-
-            </div>
+              </div> -->
           </a>
-          <!-- <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a> -->
         </div>
       </div>
     </div>
