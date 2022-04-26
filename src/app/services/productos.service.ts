@@ -67,7 +67,7 @@ export class ProductosService {
 
         let totalProductos = res[0][0].total;
         totalProductos = Math.round(totalProductos/12);
-        this.ultimaPag = totalProductos+1;
+        this.ultimaPag = totalProductos;
     });
 
   }

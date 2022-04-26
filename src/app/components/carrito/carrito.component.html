@@ -36,7 +36,7 @@
                         <div class="btn-group col-4">
                             <button class="btn btn-danger" (click)="restar(p)">-</button>
                             <input type="text" class="w-75 text-center" name="" id="" value="{{p.cantidad}}">
-                            <button class="btn btn-danger"(click)=sumar(p)>+</button>
+                            <button class="btn btn-success"(click)=sumar(p)>+</button>
                         </div>
                     </td>
                     <td class="text-center">{{ p.precio }}</td>
@@ -46,6 +46,12 @@
             
         </table>
 
+    </div>
+
+    <div class="row text-end">
+        <div class="col align-self-end">
+            <button class="btn btn-danger w-25" (click)="irLogin()">Realizar Pedido</button>
+        </div>
     </div>
 
 </div>

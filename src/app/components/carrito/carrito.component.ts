@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Producto } from 'src/app/interfaces/producto';
 import { CarritoService } from 'src/app/services/carrito.service';
 
@@ -12,7 +13,8 @@ export class CarritoComponent implements OnInit {
   carrito: Array<Producto> = [];
 
   constructor(
-    private _carritoService: CarritoService
+    private _carritoService: CarritoService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -34,5 +36,10 @@ export class CarritoComponent implements OnInit {
       item.montoTotal = item.precio*item.cantidad;
     }
   }
+
+  irLogin(){
+		let routerLink = '/login';
+    this.router.navigate([routerLink]);
+	}
 
 }

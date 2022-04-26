@@ -9,6 +9,10 @@ import { SwiperModule } from "swiper/angular";
 import { OfertasComponent } from './ofertas/ofertas.component';
 import { FooterComponent } from './footer/footer.component';
 import { CarritoComponent } from './carrito/carrito.component';
+import { LoginComponent } from './login/login.component';
+import { PedidoComponent } from './pedido/pedido.component';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -21,7 +25,9 @@ import { CarritoComponent } from './carrito/carrito.component';
     ProductosComponent,
     OfertasComponent,
     FooterComponent,
-    CarritoComponent
+    CarritoComponent,
+    LoginComponent,
+    PedidoComponent
   ],
   exports: [
     NavbarComponent,
@@ -30,7 +36,9 @@ import { CarritoComponent } from './carrito/carrito.component';
   ],
   imports: [
     CommonModule,
-    SwiperModule
+    SwiperModule,
+    FormsModule,
+    RouterModule
   ]
 })
 export class ComponentsModule { }

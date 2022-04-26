@@ -44,3 +44,8 @@
 a {
     cursor: pointer;
 }
+
+.activo {
+    background-color: rgb(154, 208, 230);
+    color: brown;
+}

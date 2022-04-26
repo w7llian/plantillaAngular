@@ -22,100 +22,16 @@
             [navigation]="true"
             class="mySwiper"
         >
-            <ng-template swiperSlide>
+            <ng-template swiperSlide *ngFor="let p of productos">
 
-                <div class="card mb-1 mb-5 animate__animated animate__fadeIn">
+                <div class="card mb-5 animate__animated animate__fadeIn">
                     <img class="card-img-top mx-auto" src="assets/medicamento.jpg" alt="">
                     <div class="card-body" data-bs-toggle="modal" data-bs-target="#modalProducto">
-                        <h5 class="card-title">Diclofenaco</h5>
-                        <p class="card-text">gergerger</p>
-                        <p class="card-text"><small class="text-muted">$120</small></p>
+                        <h5 class="card-title">{{ p.nombre }}</h5>
+                        <p class="card-text">{{ p.descripcion }}</p>
+                        <p class="card-text text-end"><small class="text-muted">${{ p.precio }}</small></p>
                     </div>
-                    <button class="btn btn-danger text-white" id="addCart" type="submit"><i class="fa-solid fa-cart-shopping mr-10"></i>Agregar al carrito</button>
-                </div>
-
-            </ng-template>
-
-            <ng-template swiperSlide>
-
-                <div class="card mb-1 mb-5 animate__animated animate__fadeIn">
-                    <img class="card-img-top mx-auto" src="assets/medicamento.jpg" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">Diclofenaco</h5>
-                        <p class="card-text">gergerger</p>
-                        <p class="card-text"><small class="text-muted">$120</small></p>
-                    </div>
-                    <button class="btn btn-danger text-white" id="addCart" type="submit"><i class="fa-solid fa-cart-shopping"></i>Agregar al carrito</button>
-                </div>
-
-            </ng-template>
-
-            <ng-template swiperSlide>
-
-                <div class="card mb-1 mb-5 animate__animated animate__fadeIn">
-                    <img class="card-img-top mx-auto" src="assets/medicamento.jpg" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">Diclofenaco</h5>
-                        <p class="card-text">gergerger</p>
-                        <p class="card-text"><small class="text-muted">$120</small></p>
-                    </div>
-                    <button class="btn btn-danger text-white" id="addCart" type="submit"><i class="fa-solid fa-cart-shopping"></i>Agregar al carrito</button>
-                </div>
-
-            </ng-template>
-
-            <ng-template swiperSlide>
-
-                <div class="card mb-1 mb-5 animate__animated animate__fadeIn">
-                    <img class="card-img-top mx-auto" src="assets/medicamento.jpg" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">Diclofenaco</h5>
-                        <p class="card-text">gergerger</p>
-                        <p class="card-text"><small class="text-muted">$120</small></p>
-                    </div>
-                    <button class="btn btn-danger text-white" id="addCart" type="submit"><i class="fa-solid fa-cart-shopping"></i>Agregar al carrito</button>
-                </div>
-
-            </ng-template>
-
-            <ng-template swiperSlide>
-
-                <div class="card mb-1 mb-5 animate__animated animate__fadeIn">
-                    <img class="card-img-top mx-auto" src="assets/medicamento.jpg" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">Diclofenaco</h5>
-                        <p class="card-text">gergerger</p>
-                        <p class="card-text"><small class="text-muted">$120</small></p>
-                    </div>
-                    <button class="btn btn-danger text-white" id="addCart" type="submit"><i class="fa-solid fa-cart-shopping"></i>Agregar al carrito</button>
-                </div>
-
-            </ng-template>
-
-            <ng-template swiperSlide>
-
-                <div class="card mb-1 mb-5 animate__animated animate__fadeIn">
-                    <img class="card-img-top mx-auto" src="assets/medicamento.jpg" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">Diclofenaco</h5>
-                        <p class="card-text">gergerger</p>
-                        <p class="card-text"><small class="text-muted">$120</small></p>
-                    </div>
-                    <button class="btn btn-danger text-white" id="addCart" type="submit"><i class="fa-solid fa-cart-shopping"></i>Agregar al carrito</button>
-                </div>
-
-            </ng-template>
-
-            <ng-template swiperSlide>
-
-                <div class="card mb-1 mb-5 animate__animated animate__fadeIn">
-                    <img class="card-img-top mx-auto" src="assets/medicamento.jpg" alt="">
-                    <div class="card-body">
-                        <h5 class="card-title">Diclofenaco</h5>
-                        <p class="card-text">gergerger</p>
-                        <p class="card-text"><small class="text-muted">$120</small></p>
-                    </div>
-                    <button class="btn btn-danger text-white" id="addCart" type="submit"><i class="fa-solid fa-cart-shopping"></i>Agregar al carrito</button>
+                    <button class="btn btn-danger text-white" id="addCart" (click)="addCart(p)"><i class="fa-solid fa-cart-shopping mr-10"></i>Agregar al carrito</button>
                 </div>
 
             </ng-template>

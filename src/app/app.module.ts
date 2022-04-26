@@ -17,7 +17,7 @@ import { ProductosService } from './services/productos.service';
     BrowserModule,
     AppRoutingModule,
     ComponentsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [CarritoService,ProductosService,{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
