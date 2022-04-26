@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Producto } from 'src/app/interfaces/producto';
 import { CarritoService } from 'src/app/services/carrito.service';
 
@@ -13,7 +14,8 @@ export class NavbarComponent implements OnInit {
   cont_carrito: number = 0;
 
   constructor(
-    private _carritoService: CarritoService
+    private _carritoService: CarritoService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -25,10 +27,26 @@ export class NavbarComponent implements OnInit {
 			this.getCarrito();
 			this.cont_carrito = this.carrito.length;
 		});
+    console.log('carrito', this.carrito);
   }
 
   getCarrito() {
     this.carrito = this._carritoService.getCarrito();
   }
+
+  irCarrito(){
+		let routerLink = '/carrito';
+    this.router.navigate([routerLink]);
+	}
+
+  irCatalogo(){
+		let routerLink = '/catalogo';
+    this.router.navigate([routerLink]);
+	}
+
+  irInicio(){
+		let routerLink = '';
+    this.router.navigate([routerLink]);
+	}
 
 }

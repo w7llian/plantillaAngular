@@ -5,8 +5,8 @@
   <div class="container-fluid">
 
     <div class="navbar-nav">
-      <a class="navbar-brand text-white" href="#"><img src="assets/951319971549261.jpg" alt="" id="imgIcono"></a>
-      <a class="navbar-brand" href="#"><strong class="text-uppercase animate__animated animate__zoomInRight"><span class="span-title">Representaciones </span>Castillo</strong></a>
+      <a class="navbar-brand text-white" (click)="irInicio()"><img src="assets/951319971549261.jpg" alt="" id="imgIcono"></a>
+      <a class="navbar-brand" (click)="irInicio()"><strong class="text-uppercase animate__animated animate__zoomInRight"><span class="span-title">Representaciones </span>Castillo</strong></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -24,20 +24,20 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            <a class="nav-link active" aria-current="page" (click)="irInicio()">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/catalogo">Catalogo</a>
+            <a (click)="irCatalogo()" class="nav-link">Catalogo</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" (click)="irInicio()" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Dropdown
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" (click)="irInicio()">Action</a></li>
+              <li><a class="dropdown-item" (click)="irInicio()">Another action</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" (click)="irInicio()">Something else here</a></li>
             </ul>
           </li>
           <!-- <li class="nav-item">
@@ -62,14 +62,30 @@
           <span id="checkout_items" class="rounded-circle checkout_items bg-danger">{{ cont_carrito }}</span>
         </button>
         <div class="dropdown-menu dropleft" aria-labelledby="dropdownMenuButton">
-          <a class="dropdown-item" href="/carrito" *ngFor="let p of carrito">
+
+          <a (click)="irInicio()">
+            <div class="row" *ngIf="carrito==null">
+              <div class="card">
+                <div class="row card-body">
+                <div class="col-3 imgCarrito">
+                </div>
+                <div class="col-9">
+                  <p class="card-text mt-0">No hay productos en el carrito</p>
+                </div>
+                </div>
+              </div>
+            
+            </div>
+          </a>
+
+          <a class="dropdown-item" (click)="irCarrito()" *ngFor="let p of carrito">
 
             <div class="row">
               <div class="col-3 imgCarrito">
                 <img class="align-self-center mr-3 w-100 p-2" src="assets/medicamento.jpg" alt="Generic placeholder image">
               </div>
               <div class="mytext col-9 bg-success">
-                <p class="card-text mt-0">{{ p.nombre }}</p>
+                <p class="mt-0">{{ p.nombre }}</p>
                 <p class="mb-0 text-muted text-end">{{ p.precio }}</p>
               </div>
             </div>

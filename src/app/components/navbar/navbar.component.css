@@ -13,12 +13,6 @@
 .nav-link {
     color: brown;
 }
-.dropdown-menu {
-}
-
-/* .span-title {
-    color: rgb(243, 227, 10);
-} */
 
 #imgIcono {
     border-radius: 50%;
@@ -42,6 +36,11 @@
     width: 400px;
 }
 
-.mytext {
-    word-break: break-all;
+.mytext{
+    word-break:break-all;
+    overflow-wrap: break-word;
+}
+
+a {
+    cursor: pointer;
 }
