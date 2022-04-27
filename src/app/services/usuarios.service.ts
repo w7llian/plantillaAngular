@@ -32,4 +32,8 @@ export class UsuariosService {
   return this.usuarioPerson[0];
 
   }
+
+  getUsuario(){
+    return <Usuario>JSON.parse(localStorage.getItem('usuario')!);
+  }
 }

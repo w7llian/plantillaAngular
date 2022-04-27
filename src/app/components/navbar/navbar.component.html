@@ -5,8 +5,8 @@
   <div class="container-fluid">
 
     <div class="navbar-nav">
-      <a class="navbar-brand text-white" (click)="irInicio()"><img src="assets/951319971549261.jpg" alt="" id="imgIcono"></a>
-      <a class="navbar-brand" (click)="irInicio()"><strong class="text-uppercase animate__animated animate__zoomInRight"><span class="span-title">Representaciones </span>Castillo</strong></a>
+      <a class="navbar-brand text-white" (click)="irInicio()"><img src="assets/logoCastilloOfi.jpg" alt="" id="imgIcono"></a>
+      <a class="navbar-brand mt-2" (click)="irInicio()"><strong class="text-uppercase animate__animated animate__zoomInRight"><span class="span-title">Representaciones </span>Castillo S.A.</strong></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -16,7 +16,7 @@
     <div class="navbar flex">
       <div class="input-group w-40 p-3">
         <input type="text" class="form-control sm-2" aria-label="Text input with segmented dropdown button">
-        <button class="btn btn-danger text-white"type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button class="btn text-white" type="submit" id="iconSearch"><i class="fa-solid fa-magnifying-glass"></i></button>
       </div>
     </div>
 
@@ -29,7 +29,10 @@
           <li class="nav-item">
             <a class="nav-link rounded-pill" routerLink="/catalogo" routerLinkActive="activo" [routerLinkActiveOptions] ="{ exact:true }">Catalogo</a>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item">
+            <a class="nav-link rounded-pill" routerLink="">Nosotros</a>
+          </li>
+          <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" (click)="irInicio()" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Dropdown
             </a>
@@ -39,7 +42,7 @@
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" (click)="irInicio()">Something else here</a></li>
             </ul>
-          </li>
+          </li> -->
           <!-- <li class="nav-item">
             <a class="nav-link disabled">Disabled</a>
           </li> -->
@@ -81,13 +84,21 @@
           <a class="dropdown-item" (click)="irCarrito()" *ngFor="let p of carrito">
 
             <div class="row">
-              <div class="col-3 imgCarrito">
+              <div class="card">
+                <div class="card-text">
+                  <img class="align-self-center mr-3 w-25 p-2" src="assets/medicamento.jpg" alt="Generic placeholder image">
+                  <p class="mt-0">{{ p.nombre }}</p>
+                  <p class="mb-0 text-muted text-start">Cantidad: {{ p.cantidad }}</p>
+                  <p class="mb-0 text-muted text-end">S/.{{ p.precio }}</p>
+                </div>
+              </div>
+              <!-- <div class="col-3 imgCarrito">
                 <img class="align-self-center mr-3 w-100 p-2" src="assets/medicamento.jpg" alt="Generic placeholder image">
               </div>
               <div class="mytext col-9 bg-success">
                 <p class="mt-0">{{ p.nombre }}</p>
                 <p class="mb-0 text-muted text-end">{{ p.precio }}</p>
-              </div>
+              </div> -->
             </div>
               <!-- <div class="card">
                 <div class="card-body">

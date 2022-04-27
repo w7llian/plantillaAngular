@@ -13,3 +13,7 @@ table {
 th {
     color: brown;
 }
+
+table #montoT {
+    width: 200px;
+}
